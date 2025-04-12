@@ -147,9 +147,12 @@ def main(params: dict) -> str | list:
                 return []
             else:
                 return db
+        else:
+            print("Не понимаю вас!")
+            return "До новых встреч!"
     except psycopg2.Error as e:
         return f"Ошибка: {e}"
 
 
-#if __name__ == "__main__":
-    #print(main(params=config()))
+if __name__ == "__main__":
+    print(main(params=config()))
