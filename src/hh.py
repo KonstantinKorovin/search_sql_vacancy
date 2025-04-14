@@ -17,7 +17,7 @@ class AbstractHH(ABC):
         pass
 
 
-class HH:
+class HH(AbstractHH):
     """
     Класс получения информации с платформы headhunter
     """

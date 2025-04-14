@@ -5,7 +5,7 @@ import psycopg2
 from src.utils import salary
 
 
-class BaseDBManager:
+class BaseDBManager(ABC):
     """
     Класс представитель DBManager
     """
@@ -31,7 +31,7 @@ class BaseDBManager:
         pass
 
 
-class DBManager(ABC):
+class DBManager(BaseDBManager):
     """
     Класс для выгрузки информации из базы данных
     """

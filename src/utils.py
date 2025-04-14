@@ -39,7 +39,7 @@ def database_salary(zn_salary: dict) -> tuple:
     """
     Форматирование зарплаты для значения таблиц
     """
-    if not zn_salary:
+    if not zn_salary or zn_salary is None:
         return 0, 0
     elif zn_salary["from"] and zn_salary["to"]:
         return int(zn_salary["from"]), int(zn_salary["to"])
